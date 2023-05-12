@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    background-image: radial-gradient(circle, #e2f1f3, #ecfefe, #f6f3f6, #fdedfc);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.493)
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.navbar .menu-items {
+    display: flex;
+}
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container{
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+    padding-top: 130px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    height: 90vh;
+    width: 100%;
+    transform: translate(-180%);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10.5rem;
+    /* Only for visualizing the space */
+    background-color: #000;
+}
+
+.logo {
+    display: flex;
+    justify-content: end;
+}
+
+.logo img {
+    height: 30%;
+    width: 30%;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+}
+/* Ending of the Navbar */
+
+
+
+
+.consulting {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 20px 2rem 20px;
+    background-image: radial-gradient(circle, #e2f1f3, #ecfefe, #f6f3f6, #fdedfc);
+}
+
+.card-container {
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255,);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    transition: height 1s ease-in-out;
+}
+
+.card.marketing {
+    background-image: url(marketing1.jpg);
+}
+.card.coaching {
+    background-image: url(coaching1.jpg);
+}
+.card.courses {
+    background-image: url(education1.jpg);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #07a38e;
+}
+
+.card.marketing h2, .card.courses h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card.coaching h2 {
+    font-size: 2rem;
+    color: #ffbf00;
+}
+
+.card-content ul {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    font-size: 1.5rem;
+    margin-top: 10rem;
+    background-color: rgba(135, 141, 146, 0.747);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #ffbf00;
+    /* color: #72f7f7; */
+}
+
+.card.coaching ul {
+    text-align: start;
+    background-color: rgba(240, 248, 255, 0.514);
+    color: #05695c;
+}
+
+
+
+/* Styling for button and forms */
+.my-button {
+    padding: 10px 20px;
+    background-color: rgba(7, 163, 142, 0.603);
+    color: #ffbf00;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.my-button:hover {
+    background-color: rgba(4, 88, 77, 0.719);
+}
+
+.request-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+  
+  /* Styling for input fields */
+.request-form input[type="text"],
+.request-form input[type="email"],
+.request-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+  /* Styling for submit button */
+.request-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+  /* Styling for go back button */
+.request-form button.goBack {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .card {
+        height: 20rem; 
+    }
+    .card-container {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1036px) {
+    .card.marketing {
+        background-image: url(resize-card1.jpg);
+    }
+    .card.coaching {
+        background-image: url(resize-card2.jpg);
+    }
+    .card.courses {
+        background-image: url(resize-card3.jpg);
+    }
+
+    .card {
+        height: 35rem; 
+    }
+    .card-container {
+        width: 90%;
+    }
+    .logo img {
+        height: 30%;
+        width: 35%;
+    }
+    .card.coaching .card-content h2 {
+        color: #20ad96;
+        text-align: center;
+    }
+    .card-content ul {
+        margin-top: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 815px) {
+    .logo img {
+        height: 30%;
+        width: 45%;
+    }
+    .card-content ul {
+        margin-top: 22rem;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .logo img {
+        height: 30%;
+        width: 55%;
+    }
+    .card-content ul {
+        margin-top: 21rem;
+    }
+}
+
+/* Mobile displays and Landscape display */
+
+@media only screen and (max-width: 471px) {
+    .logo img {
+        height: 30%;
+        width: 80%;
+        transform: translate(0,2px);
+    }
+    .card-content ul {
+        margin-top: 15rem;
+    }
+}
+
+@media only screen and (max-width: 349px) {
+    .logo img {
+        height: 30%;
+        width: 80%;
+        transform: translate(0,7px);
+    }
+    .card-content ul {
+        margin-top: 12rem;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .logo img {
+        height: 30%;
+        width: 80%;
+        transform: translate(0,10px);
+    }
+    .card-content ul {
+        margin-top: 7.5rem;
+    }
+}
